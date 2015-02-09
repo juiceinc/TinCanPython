@@ -106,7 +106,7 @@ class LRSResponse(Base):
         :type value: unicode
         """
         if value is not None and not isinstance(value, unicode):
-            value = value.decode('utf-8')
+            value = unicode(value, encoding='utf-8')
         self._data = value
 
     @property
